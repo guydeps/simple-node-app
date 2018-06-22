@@ -1,3 +1,4 @@
+#!/bin/bash
 SUBSCRIPTION="Free Trial"
 RESOURCEGROUP="simple-node-resource-group"
 LOCATION="westeurope"
@@ -25,7 +26,7 @@ az webapp create --name $SITENAME --plan $PLANNAME --runtime $RUNTIME --resource
 # first, set the username and password (use environment variables!)
  USERNAME="lyonRocks"
  PASSWORD="Monday01"
-# az webapp deployment user set --user-name $USERNAME --password $PASSWORD
+az webapp deployment user set --user-name $USERNAME --password $PASSWORD
 
 # now, configure the site for deployment. in this case, we will deploy from the local git repository
 # you can also configure your site to be deployed from a remote git repository or set up a CI/CD workflow
